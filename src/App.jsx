@@ -4,28 +4,20 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import LoginPage from './pages/login'
-import RegisterPage from './pages/register'
-import AuthPage from './pages/private-route'
-import ProfilePage from './pages/profile'
+import Login from './components/login'
+import SignUp from './components/register'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    
-   <div>
-     <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path='/profile' element={<AuthPage>
-          <ProfilePage />
-        </AuthPage>} />
-     </Routes>
-
-      <h1>React Firebase Auth App</h1>
-   </div>
-  
+    <div>
+      <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<SignUp />} />
+      </Routes>
+    </div>
   )
 }
 
