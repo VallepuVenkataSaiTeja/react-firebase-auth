@@ -6,6 +6,8 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Login from './components/login'
 import SignUp from './components/register'
+import { ToastContainer } from 'react-toastify'
+import Profile from './components/profile'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,7 +18,9 @@ function App() {
           <Route path='/' element={<Login />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<SignUp />} />
+          <Route path='/profile' element={<Profile />} />
       </Routes>
+      <ToastContainer />
     </div>
   )
 }
